@@ -63,7 +63,7 @@ export function EmployeesClient({
   const [department, setDepartment] = useState('')
   const [role, setRole] = useState('')
   const [employmentType, setEmploymentType] = useState('')
-  const [hourlWage, setHourlyWage] = useState('')
+  const [hourlyWage, setHourlyWage] = useState('')
   const [monthlySalary, setMonthlySalary] = useState('')
   const [joinDate, setJoinDate] = useState('')
   const [loading, setLoading] = useState(false)
@@ -103,7 +103,7 @@ export function EmployeesClient({
       department: department || null,
       role: role || null,
       employment_type: employmentType || null,
-      hourly_wage: hourlWage ? Number(hourlWage) : null,
+      hourly_wage: hourlyWage ? Number(hourlyWage) : null,
       monthly_salary: monthlySalary ? Number(monthlySalary) : null,
       join_date: joinDate || null,
       organization_id: organizationId,
@@ -191,7 +191,7 @@ export function EmployeesClient({
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="emp-hourly">時給</Label>
-                  <Input id="emp-hourly" type="number" value={hourlWage} onChange={(e) => setHourlyWage(e.target.value)} />
+                  <Input id="emp-hourly" type="number" value={hourlyWage} onChange={(e) => setHourlyWage(e.target.value)} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="emp-monthly">月給</Label>
